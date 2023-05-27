@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Lab of Data Structures</title>
+    <link rel="stylesheet" href="">
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:#dbd6b9;
+      }
+      header {
+        background-color:#03072e;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 25px;
+      }
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration:dotted;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #bfe933;
+        
+      }
+      main {
+       width: 1000px;
+       height: 500px;
+        margin: 0 auto;
+        padding: 65px;
+        background-color: #d7e4e6;
+        margin: 50px 75px;
+        align-items: center;
+        border-radius: 30px;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #03072e;
+  
+    padding: 40px;
+    width: 1520px;
+    justify-content:space-between;
+
+   
+    
+}
+.footer-col{
+  width: 33%;
+    
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  text-align: center;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:hwb(0 4% 96%);
+}
+.flex-container .box {
+  background-color: hwb(26 49% 5%);
+  width: 50%;
+  margin: 5px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 27px;
+}
+.bolded { font-weight: bold; }
+.left-navbar {
+  background-color: #d7e4e6;
+  color: #fff;
+  width: 200px;
+  height: 42vh;
+ border-radius: 4px;
+  top: 0;
+  left: 0;
+  padding-top: 64px;
+  margin-top: 150px;
+  border-radius: 5px;
+  /* margin-left: 20px; */
+}
+
+.left-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left-navbar ul li {
+  margin-bottom: 10px;
+}
+
+.left-navbar ul li a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.container1
+{
+    display: flex;
+    
+
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:hwb(0 4% 96%);
+}
+.flex-container .box {
+  background-color: hwb(26 49% 5%);
+  width: 50%;
+  margin: 5px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 27px;
+}
+.sunit
+{
+  font-family:'Times New Roman', Times, serif;
+text-align: center;
+  font-weight: bold;
+  ;
+}
+.option
+{
+ padding-left: 60px;
+}
+#submit-btn
+{
+ padding: 12px 23px 10px 20px;
+ border: #000000 3px solid;
+ border-radius: 9px;
+ color: #ffffff;
+ background-color: #29b837;
+ text-align: start;
+ margin-top: 20px;
+ margin-left: -8px;
+}
+ </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Virtual Lab of Data Structures</h1>
+        <ul>
+          <li><a  style="text-decoration: none;" href="home.html">Introduction</a></li>
+          <li><a href="objective.html">objective</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="feedback.html">Trgeted Audience</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container1">
+      <div class="left-navbar">
+          <ul style="font-family: sans-serif;font-size: 20px;">
+            <li><a href="aim.html">Aim of bubble sort</a></li>
+            <li><a href="conceptbubble.html">Concept</a></li>
+            <li><a href="bubblesanika.html">Time complexity</a></li>
+            <li><a href="bubblev.html">Visuliser</a></li>
+          </ul>
+        </div>
+        <!-- <div class="vertical-line"></div> -->
+
+     
+      <div clas="right">
+        <main>
+          <h1 class="sunit">	
+            Multiple Choice Question</h1>
+    
+          <div id="quiz-container">
+            <div  style="padding-top: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 22px;" id="question-container" class="question">
+              
+            </div>
+            <div id="options-container" class="options">
+                
+            </div>
+            <button id="submit-btn">Submit</button>
+            
+          </button>
+            <div id="result"></div>
+          </div>    
+        </main>
+        <script> // Quiz questions and answers
+          const quizData = [
+          {
+                question:"Q1.  What is the worst case complexity of bubble sort?",
+                options: ["O(nlogn)", "O(logn)", "O(n)", " O(n^2)"],
+                answer: " O(n^2)"
+              },
+              {
+                question: "Question 2.  Which of the following is not an advantage of optimised bubble sort over other sorting techniques in case of sorted elements?",
+                options: [" It is faster", "Consumes less memory", "Detects whether the input is already sorted", "Consumes less time"],
+                answer: "Detects whether the input is already sorted"
+              },
+              {
+                question: "Question 3.  The given array is arr = {1, 2, 4, 3}. Bubble sort is used to sort the array elements. How many iterations will be done to sort the array?",
+                options: ["4", "2", "1", "0"],
+                answer: "4"
+              },
+              {
+                question: "Question 4.  The given array is arr = {1,2,4,3}. Bubble sort is used to sort the array elements. How many iterations will be done to sort the array with improvised version?",
+                options: ["4", "2", "1", "0"],
+                answer: "2"
+              },
+              {
+                question: "Question 5.  Bubble sort is an example of a __________ sort.",
+                options: [" Divide and conquer", "Greedy", "Comparison-based", " Radix"],
+                answer: "Comparison-based"
+              },
+              {
+                question: "Question 6.  Which of the following is true about bubble sort?",
+                options: ["It is the fastest sorting algorithm.", " It is a stable sorting algorithm.", "It can only be used for sorting small lists.", "It has a time complexity of O(log n)."],
+                answer: " It is a stable sorting algorithm."
+              },
+              {
+                question: "Question 7.  Bubble sort can be optimized by __________.",
+                options: ["Using a divide and conquer approach", "Implementing parallel processing", "Applying early exit when no swaps occur", "Increasing the number of comparisons"],
+                answer: "Applying early exit when no swaps occur"
+              },
+              {
+                question: "Question 8.  Bubble sort is a stable sorting algorithm. What does it mean?",
+                options: [" It preserves the relative order of equal elements", "It guarantees a consistent time complexity.", " It always produces the same output for the same input.", "It is not affected by the initial order of elements."],
+                answer: " It preserves the relative order of equal elements"
+              },
+              {
+                question: "Question 9.  Which of the following scenarios is bubble sort most suitable for?",
+                options: ["Sorting a large dataset in real-time.", "Sorting a linked list.", "Sorting a dataset with complex data structures.", "Sorting a short array of integers."],
+                answer: "Sorting a short array of integers."
+              },
+              {
+                question: "Question 10.  Bubble sort is considered an inefficient sorting algorithm for large datasets because:",
+                options: ["It requires additional memory space.", "It has a high worst-case time complexity.", "It only works for numeric data.", " It cannot handle duplicate elements."],
+                answer: "It has a high worst-case time complexity."
+              }
+              
+          
+            ];
+        
+            let currentQuestion = 0;
+            let userAnswers = [];
+        
+            const questionContainer = document.getElementById("question-container");
+            const optionsContainer = document.getElementById("options-container");
+            const submitButton = document.getElementById("submit-btn");
+            const resultContainer = document.getElementById("result");
+        
+            function displayQuestion() {
+          const question = quizData[currentQuestion];
+          questionContainer.innerText = question.question;
+          optionsContainer.innerHTML = "";
+        
+          for (let i = 0; i < question.options.length; i++) {
+            const option = question.options[i];
+        
+            const optionContainer = document.createElement("div");
+            optionContainer.classList.add("option-container");
+        
+            const radioBtn = document.createElement("input");
+            radioBtn.type = "radio";
+            radioBtn.name = "answer";
+            radioBtn.value = option;
+        
+            const label = document.createElement("label");
+            label.innerText = option;
+        
+            optionContainer.appendChild(radioBtn);
+            optionContainer.appendChild(label);
+        
+            optionsContainer.appendChild(optionContainer);
+          }
+        }
+        
+        
+            function submitAnswer() {
+              const selectedOption = document.querySelector('input[name="answer"]:checked');
+              if (selectedOption) {
+                userAnswers.push(selectedOption.value);
+                currentQuestion++;
+        
+                if (currentQuestion < quizData.length) {
+                  displayQuestion();
+                } else {
+                  displayResult();
+                }
+              }
+            }
+        
+            function displayResult() {
+              let score = 0;
+        
+              for (let i = 0; i < quizData.length; i++) {
+                if (userAnswers[i] === quizData[i].answer) {
+                  score++;
+                }
+              }
+        
+              resultContainer.innerText = `Your score: ${score}/${quizData.length}`;
+            }
+        
+            // Event listeners
+            submitButton.addEventListener("click", submitAnswer);
+        
+            // Display the first question
+            displayQuestion();
+         </script>
+      </div>
+    </div>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Footer Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+    
+      <footer class="footer">
+         <div class="container">
+           <div class="row">
+             <div class="footer-col">
+              <h4>Community</h4>
+              <ul>
+               <li><a href="https://www.linkedin.com/in/sunit-kapure-85944423a">Lead Developer</a></li>
+               <li><a href="https://www.linkedin.com/in/sanika-ingle-096587259">Frountend Developer</a></li>
+               <li><a href="#">Video Creation</a></li>
+               <li><a href="https://www.linkedin.com/in/atharva-patil-6a762a231/">Documentation</a></li>
+             </ul>
+             </div>
+             
+             <div class="footer-col">
+               <h4>Contact Us</h4>
+               <ul>
+                 <li><a href="#">Email:virtual_lab45@gmail.com</a></li>
+                 <li><a href="#">phone no: +91 8799992023</a></li>
+                 <li><a href="#">Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033.</a></li>
+                 <!-- Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033. -->
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>follow us</h4>
+               <div class="social-links">
+                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+             </div>
+           </div>
+         </div>
+         <h3 STYLE="color: #919191;text-align: center;padding-top: 58px;font-family: sans-serif;font-weight: lighter;"> Designed and Developed with By Sunit_K And Sanika_I</h3>
+         <h5 style="color: #989898; padding-top: 20px; text-align: center;font-size: 14px;">
+          © Virtual Lab-2023. All rights reserved. The material and content on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of team Matrix.
+
+
+       </h5>
+             </footer>
+       
+    
+    </body>
+    </html>

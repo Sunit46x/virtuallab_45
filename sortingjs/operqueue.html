@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Lab of Data Structures</title>
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:#dbd6b9;
+      }
+      header {
+        background-color:#000000;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 25px;
+      }
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration:dotted;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #37acb9;
+        
+      }
+      main {
+       width: 1000px;
+       height: 2000px;
+        margin: 0 auto;
+        padding: 65px;
+        background-color: #d7e4e6;
+        margin: 50px 250px;
+        align-items: center;
+        border-radius: 30px;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000000;
+    padding: 20px;
+    width: 1520px;
+    
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  text-align: center;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.tushar1
+{
+  width: 620px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+}
+.tushar2
+{
+    width: 792px;
+    height: 258px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+}
+.tushar3
+{
+    width: 792px;
+    height: 258px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+}
+
+ </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Virtual Lab of Data Structures</h1>
+        <ul>
+          <li><a  style="text-decoration: none;" href="home.html">Introduction</a></li>
+          <li><a href="objective.html">objective</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="targeted.html">Trgeted Audience</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="text-align: center;">Operation on Queue </h1><br>
+      <h2 style="font-family:'Times New Roman', Times, serif;font-weight: bold;font-size: 25px;">1) create:
+        
+        <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">Creates and initializes new queue that is empty, it does not require any parameter and returns an empty queue.</p></h2>
+
+          <h2 style="font-weight:lighter;font-family: 'Times New Roman', Times, serif;padding-top: 16px;"><span></span></h2>
+          <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;"></H2>
+        <h2 style="font-family:'Times New Roman', Times, serif;font-weight: bold;font-size: 25px;">2) Enqueue:
+            <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;"> Add a new element to the rear of queue . It requires the element to be added and returns nothing</p></h2>
+            <h2><div style="font-weight: lighter;padding-left:20px;padding-top: 11px;font-family:monospace;" class="tushar1">
+                Step 1: Check if the queue is full.<br>
+                Step 2: If the queue is full, Overflow error.<br>
+                Step 3: If the queue is not full, increment the rear pointer to point to the next available empty space. <br>
+                 Step 4: Add the data element to the queue location where the rear is pointing.<br>
+                Step 5: Here, you have successfully added 7, 2, and -9. </h2><br>
+                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Queue_in_Data_Structure-Enqueue_Operation.png" alt="Queue_in_Data_Structure-Enqueue_Operation." width="750px" height="400px" style="margin-left: 50px;margin-top: 30px; border: #000000 solid 5px; border-radius: 20px;">
+                <!-- ithna dequeue cha operation  -->
+       <h2 style="font-family:'Times New Roman', Times, serif;font-weight: bold;font-size: 25px;">2) Dequeue:
+                    <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;"> removes the elements from the front of queue. It does not require any parameters and returns the deleted item.</p></h2>
+                    <h2><div style="font-weight: lighter;padding-left:20px;padding-top: 11px;font-family:monospace;" class="tushar2">
+                        Step 1: Check if the queue is empty.<br>
+Step 2: If the queue is empty, Underflow error.<br>
+Step 3: If the queue is not empty, access the data where the front pointer is pointing.<br> 
+Step 4: Increment front pointer to point to the next available data element.<br>
+Step 5: Here, you have removed 7, 2, and -9 from the queue data structure. <br>
+<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Queue_in_Data_Structure-Dequeue_Operation.png" alt="Queue_in_Data_Structure-Dequeue_Operation" width="750px" height="400px" style="    margin-left: -6px;
+margin-top: 55px; border: #000000 solid 5px; border-radius: 20px;">
+
+<!-- peek() cha code ithnaaa -->
+<!-- <h2 style="font-family:'Times New Roman', Times, serif;font-weight: bold;font-size: 25px; margin-top: 20px;">3) peek:
+    <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;"> This function helps in extracting the data element where the front is pointing without removing it from the queue.</p></h2>  
+    <div style="font-weight: lighter;padding-left:20px;padding-top: 11px;font-family:monospace;" class="tushar3">
+<h2>Step 1: Check if the queue is empty.<br>
+Step 2: If the queue is empty, return “Queue is Empty.<br>
+Step 3: If the queue is not empty, access the data where the front pointer is pointing.<br>
+Step 4: Return data.<br> -->
+          
+    </main>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Footer Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+    
+      <footer class="footer">
+         <div class="container">
+           <div class="row">
+             <div class="footer-col">
+              <h4>Devloped by</h4>
+              <ul>
+               <li><a href="#">Sunit Kapure</a></li>
+               <li><a href="#">Sanika Ingle</a></li>
+             </ul>
+             </div>
+             <div class="footer-col">
+               <h4>About us</h4>
+               <ul>
+                 <li><a href="#">frontend developers</a></li>
+                 <li><a href="#">Backend developers</a></li>
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>Contact Us</h4>
+               <ul>
+                 <li><a href="#">Email:XYZ00@gmail.com</a></li>
+                 <li><a href="#">phone no:87999****23</a></li>
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>follow us</h4>
+               <div class="social-links">
+                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+             </div>
+           </div>
+         </div>
+      </footer>
+    
+    </body>
+    </html>
+    
+    
+  </body>
+</html>

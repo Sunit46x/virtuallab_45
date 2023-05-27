@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(205, 0, 0);
+}
+#overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    pointer-events: none;
+    user-select: none;
+}
+
+
