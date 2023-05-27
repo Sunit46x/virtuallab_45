@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS styles go here */
+        body {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-color:#dbd6b9;
+        }
+        header {
+          background-color:#000000;
+          color: rgb(255, 255, 255);
+          padding: 25px;
+        }
+        h1 {
+          margin: 0;
+          font-size: 30px;
+          font-weight: normal;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+        nav li {
+          margin-right: 25px;
+        }
+        nav a {
+          color: rgb(255, 255, 255);
+          text-decoration:dotted;
+          font-size: 20px;
+          transition: color 0.3s;
+        }
+        nav a:hover {
+          color: #37acb9;
+          
+        }
+        table, th, td {
+  border:1px solid black;
+}
+        main {
+         width: 1000px;
+         height: 2550px;
+          margin: 0 auto;
+          padding: 65px;
+          background-color: #d7e4e6;
+          margin: 50px 250px;
+          align-items: center;
+          border-radius: 30px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  body{
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+  }
+  *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+  }
+  .container{
+      max-width: 1000px;
+      margin:auto;
+  }
+  .row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul{
+      list-style: none;
+  }
+  .footer{
+      background-color: #000000;
+      padding: 20px;
+      width: 1520px;
+      
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+      color: #ffffff;
+      padding-left: 8px;
+  }
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255,255,255,0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+    text-align: center;
+  }
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  .flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:hwb(0 4% 96%);
+}
+.flex-container .box {
+  background-color: hwb(26 49% 5%);
+  width: 50%;
+  margin: 5px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 27px;
+}
+.bolded { font-weight: bold; }
+   </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <h1>Virtual Lab of Data Structures</h1>
+      </nav>
+    </header>
+
+    <main>
+            <h1><b>IMPLEMENTATION OF  INSERTION SORT  </b></h1><br>
+            <p style="font-size:20px;">#include< stdio.h ><br>
+                #include< stdlib.h ><br>
+                #include< math.h ><br>
+                #include< time.h ><br>
+                #define N 1000000<br>
+                int a[N], n , start, end;<br>
+                void printArray()
+                {<br>
+                  int i;<br>
+                for (i = 0; i < n; i++){<br>
+                printf("%d ",a[i]);}<br>
+                }<br>
+                <br>
+                 void Clock()
+                {<br>
+                    double time1, time_diff;<br>
+                    int n;<br>
+                    time1 = (double) clock();  <br>
+                    time1 = time1 / CLOCKS_PER_SEC; <br> 
+                    for (n=0; n < 100000000; n++ );<br>
+                    time_diff = (((double) clock()) / CLOCKS_PER_SEC) - time1;<br>
+                    printf("The elapsed time is %lf seconds\n", time_diff);<br>
+                }<br>
+                <br>
+                void bestcase()
+                {<br>
+                  int i;<br>
+                printf("Enter the number(ascending number) : ");<br>
+                scanf("%d",&n);<br>
+                Clock();<br>
+                }<br>
+                <br>
+                void worstcase()
+                {<br>
+                  int i;<br>
+                printf("Enter the number(descending number) : ");<br>
+                scanf("%d",&n);<br>
+                for(i=n-1;i< 1 ; i++) <br>
+                printf("%d",i);<br>
+                Clock();<br>
+                }<br>
+                <br>
+                void averagecase()
+                {<br>
+                  int i;<br>
+                printf("\nEnter range of your numbers to sort : ");<br>
+                scanf("%d",&n);<br>
+                for (int i = 0; i < n; i++)<br>
+                        a[i] = (rand() % (100) + 1);<br>
+                        
+                        Clock();<br>
+                }<br>
+                <br>
+                void insertsort()
+                {  <br>
+                    int i, j, temp;  <br>
+                    for (i = 1; i < n; i++) { <br> 
+                        temp = a[i];  <br>
+                        j = i - 1;  <br>
+                        while(j>=0 && temp < = a[j])   
+                        {    <br>
+                            a[j+1] = a[j];    <br>
+                            j = j-1;    <br>
+                        }    <br>
+                        a[j+1] = temp;    <br>
+                    }  <br>
+                    bestcase();<br>
+                    worstcase();<br>
+                    averagecase();<br>
+                }  <br>
+                <br>
+                  
+                
+                int main(void){<br>
+                    printf("Insertion Sort: ");<br>
+                    insertsort();    <br>
+                }<br><br>
+            </p>
+            <h2>Running Time for different Inputs</h2>  <br>  <table style="width:100%">
+                    <tr>
+                      <th> Input</th>
+                      <th> Best Case</th>
+                      <th> Average Case</th>
+                      <th> Worst Case</th>
+                    </tr>
+                    <tr>
+                      <td>  10 </td>
+                      <td>  0.201311 seconds </td>
+                      <td>  0.201374 seconds </td>
+                      <td>  0.201861 seconds </td>
+                    </tr>
+                    <tr>
+                      <td>  100</td>
+                      <td>  0.210169 seconds</td>
+                      <td>  0.210840 seconds</td>
+                      <td>  0.211208 seconds</td>
+                    </tr>
+                    <tr>
+                      <td>  1000</td>
+                      <td>  0.211409 seconds</td>
+                      <td>  0.210835 seconds</td>
+                      <td>  0.210022 seconds</td>
+                    </tr>
+                  </table><br>
+                  <h2>Interpretation : </h2>
+                  <p style="font-size:20px;">As the size of the array goes on increasing the time complexity also goes on increasing.The time complexity varies in the pattern : <br> best < average < worst. </p>
+            </main>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Footer Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+<body>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+         <h4>Devloped by</h4>
+         <ul>
+          <li><a href="#">Sunit Kapure</a></li>
+          <li><a href="#">Sanika Ingle</a></li>
+        </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="#">frontend developers</a></li>
+            <li><a href="#">Backend developers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="#">Email:XYZ00@gmail.com</a></li>
+            <li><a href="#">phone no:87999****23</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+           </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+</body>
+</html>

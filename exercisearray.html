@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Choice Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background-color: rgb(79, 230, 235);
+    }
+    form{
+      margin-top:20px;
+    }
+    .quiz-container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .question {
+      width:45%;
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding:20px;
+      border-radius: 20px;
+    }
+    .question:nth-child(odd){
+      margin-right:5%;
+    }
+    .question p{
+      font-weight: bold;
+    }
+    
+    .answers {
+      margin-bottom: 20px;
+    }
+    .answers label:not(:first-child){
+      border-top:1px solid #e0e0e0;
+    }
+    
+    label {
+      padding:10px 0;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    
+    .submit-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    
+    .result {
+      font-weight: bold;
+      font-size: 22px;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .d-flex{
+      display: flex;
+    }
+    .question1 {
+      width:45%;
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding:20px;
+    }
+    .question1:nth-child(odd){
+      margin-right:5%;
+    }
+    .question1 p{
+      font-weight: bold;
+    }
+    
+    .answers1 {
+      margin-bottom: 20px;
+    }
+    .answers1 label:not(:first-child){
+      border-top:1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Multiple Choice Quiz</h1>
+    <hr>
+    <form id="quiz-form">
+      <div class="d-flex">
+        <div class="question">
+          <p>1.What is Array?</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q1" value="a">
+              Collection of different type of elements
+            </label>
+            <label>
+              <input type="radio" name="q1" value="b">
+              Collection of similar type of elements
+            </label>
+            <label>
+              <input type="radio" name="q1" value="c">
+              None of the above
+            </label>
+            <label>
+              <input type="radio" name="q1" value="d">
+              Both A and C
+            </label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <p>2.What is right way to Initialize array?</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q2" value="a">
+              int num[6] = { 2, 4, 12, 5, 45, 5 };
+            </label>
+            <label>
+              <input type="radio" name="q2" value="b">
+              int n{} = { 2, 4, 12, 5, 45, 5 };
+            </label>
+            <label>
+              <input type="radio" name="q2" value="c">
+              int n{6} = { 2, 4, 12 };
+            </label>
+            <label>
+              <input type="radio" name="q2" value="d">
+              int n(6) = { 2, 4, 12, 5, 45, 5 };
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- question third ahe next row la -->
+      <div class="d-flex">
+        <div class="question">
+          <p>3.An array elements are always stored in ________ memory locations.</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q1" value="a">
+              Random
+            </label>
+            <label>
+              <input type="radio" name="q1" value="b">
+              None of the above
+            </label>
+            <label>
+              <input type="radio" name="q1" value="c">
+              Sequential
+            </label>
+            <label>
+              <input type="radio" name="q1" value="d">
+              Sequential and Random
+            </label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <p>4.What will be the output of the below program?
+            #include<stdio.h>
+            main()
+            {
+            int x[] = {100, 200, 300};
+            printf("%d", *x +1);
+            }</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q2" value="a">
+              100
+            </label>
+            <label>
+              <input type="radio" name="q2" value="b">
+              200
+            </label>
+            <label>
+              <input type="radio" name="q2" value="c">
+              201
+            </label>
+            <label>
+              <input type="radio" name="q2" value="d">
+              101
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="question">
+          <p>1. What will be the output of the program ? #include<stdio.h>
+            int main()
+            {
+            int arr[1]={10};
+            printf("%d\n", 0[arr]);
+            return 0;
+            }</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q1" value="a">
+              1
+            </label>
+            <label>
+              <input type="radio" name="q1" value="b">
+             10
+            </label>
+            <label>
+              <input type="radio" name="q1" value="c">
+              0
+            </label>
+            <label>
+              <input type="radio" name="q1" value="d">
+              6
+            </label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <p>6. The parameter passing mechanism for an array is</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q2" value="a">
+              call by reference
+            </label>
+            <label>
+              <input type="radio" name="q2" value="b">
+              call by value
+            </label>
+            <label>
+              <input type="radio" name="q2" value="c">
+              call by value-result
+            </label>
+            <label>
+              <input type="radio" name="q2" value="d">
+              None of the above
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="d-flex">
+        <div class="question">
+          <p>7.What will be the output of the following program?
+            void main()
+            {
+            char str1[] = "abcd";
+            char str2[] = "abcd";
+            if(str1==str2)
+            printf("Equal");
+            else
+            printf("Unequal");
+            }</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q1" value="a">
+              Equal
+ 
+            </label>
+            <label>
+              <input type="radio" name="q1" value="b">
+              Unequal
+            </label>
+            <label>
+              <input type="radio" name="q1" value="c">
+              Error
+            </label>
+            <label>
+              <input type="radio" name="q1" value="d">
+              None of these.
+            </label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <p>8.What will be the output of the program if the array begins at address 65486?
+            #include<stdio.h>
+            void main()
+            {
+            int arr[] = {12, 14, 15, 23, 45};
+            printf("%u, %u", arr, &arr);
+            }</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q2" value="a">
+              A. 65486, 65488
+            </label>
+            <label>
+              <input type="radio" name="q2" value="b">
+              65486, 65490
+            </label>
+            <label>
+              <input type="radio" name="q2" value="c">
+              65486, 65487
+            </label>
+            <label>
+              <input type="radio" name="q2" value="d">
+              65486, 65486
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="question">
+          <p>9.What will be the output of the program ?
+            #include<stdio.h>
+            void main()
+            {
+            float arr[] = {12.4, 2.3, 4.5, 6.7};
+            printf("%d", sizeof(arr)/sizeof(arr[0]));
+            }</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q1" value="a">
+              4
+            </label>
+            <label>
+              <input type="radio" name="q1" value="b">
+              5
+            </label>
+            <label>
+              <input type="radio" name="q1" value="c">
+              5
+            </label>
+            <label>
+              <input type="radio" name="q1" value="d">
+              none of above
+            </label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <p>10.Is there any difference int the following declarations?
+            int fun(int arr[]);
+            int fun(int arr[2]);</p>
+          <div class="answers">
+            <label>
+              <input type="radio" name="q2" value="a">
+              yes
+            </label>
+            <label>
+              <input type="radio" name="q2" value="b">
+              no
+            </label>
+            
+          </div>
+        </div>
+      </div>
+<style>
+
+h3{
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  font-weight: lighter;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0%;
+}
+</style>     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    
+    <div class="result" id="result"></div>
+  </div>
+  <footer>
+    <h3>Design and Devloped by Sunit Kapure</h3>
+     
+    </h2>
+  </footer>
+  
+  <script>
+    const quizForm = document.getElementById('quiz-form');
+    const resultDiv = document.getElementById('result');
+    const correctAnswers = ['a','a','c','d','b','a','b','d','a','b'];
+    
+    quizForm.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      let score = 0;
+      const userAnswers = [quizForm.q1.value,quizForm.q2.value];
+      userAnswers.forEach((answer, index) => {
+        if (answer === correctAnswers[index]) {
+          score += 1;
+        }
+      });
+    
+      resultDiv.innerHTML = `Your score is ${score}/${correctAnswers.length}`;
+    });
+</script>
