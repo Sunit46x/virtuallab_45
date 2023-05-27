@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objective</title>
+</head>
+
+    <style>
+     
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:#dbd6b9;
+      }
+      header {
+        background-color:#000000;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+        
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        font-family:'Times New Roman', Times, serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 25px;
+      }
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration:dotted;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #37acb9;
+        
+      }
+      main {
+       width: 1200px;
+       height: 2125px;
+        margin: 0 auto;
+        padding: 65px;
+        background-color: #d7e4e6;
+        margin: 50px 250px;
+        align-items: center;
+        border-radius: 40px;
+        margin-left: 153px;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #1f1111;
+    padding: 20px;
+    width: 1530px;
+    
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  text-align: center;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+#sunit
+{
+    text-align: center;
+    font-family: sans-serif; 
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: -30px;
+}
+.img {
+  width: 80%; /* make the image fill the container */
+  height: auto; /* maintain aspect ratio */
+  display: block; /* remove default image spacing */
+  width: 70%; /* set the width of the container */
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+table {
+			border-collapse: collapse;
+			width: 100%;
+			max-width: 600px;
+			margin: auto;
+		}
+		td, th {
+			border: 1px solid black;
+			padding: 8px;
+			text-align: left;
+		}
+		th {
+			background-color: #ccc;
+		}
+
+
+ </style>
+</style>
+<body>
+    <header>
+        <nav>
+          <h1>Virtual Lab of Data Structures</h1>
+          <ul>
+            <li><a href="aa.html">Introduction</a></li>
+            <li><a href="objective.html">objective</a></li>
+            <li><a href="Simulation.html">Simulation</a></li>
+            <li><a href="targeted audience.html">Targeted audience</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1 id="sunit" style="font-family: 'Times New Roman', Times, serif;">Quick Sort</h1>
+        <br>
+        <h3 style="font-family: 'Times New Roman', Times, serif;font-weight: lighter;" ><span>➤</span>Quick sort is a divide-and-conquer sorting algorithm that selects a pivot element,
+             partitions the array around the pivot, and recursively sorts the resulting sub-arrays. It achieves average-case time complexity of O(n log n) and is widely used in practice 
+             for its efficiency.</h3>
+             <br>
+        <h1 style="text-align: center;font-family: 'Times New Roman', Times, serif;">How Quick-sort works?</h1> 
+        <br> 
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;"><span style="padding-left: -10px;">➤</span>Quick sort works by following these steps:</h3><br>
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;"><span style="padding-left: -10px;padding-left: 20px;"></span>1.Select a pivot element from the array.</h3>
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;"><span style="padding-left: -10px;padding-left: 20px"></span>2.Partition the array into two sub-arrays: elements smaller than the
+           pivot and elements larger than the pivot.</h3>
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;"><span style="padding-left: -10px;padding-left: 20px"></span>3.Recursively apply steps 1 and 2 to the sub-arrays.</h3> 
+       
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;"><span style="padding-left: -10px;padding-left: 20px"></span> 4.Combine the sorted sub-arrays to obtain the final sorted array. </h3>   
+       <img style="padding-top: 40px;padding-left: 25px;border-radius: 20px; border: #ccc;" src="https://media.geeksforgeeks.org/wp-content/uploads/20230331184338/Quick-sort-gif.gif">
+       
+        <img style="padding-top: 30px;border: #bbbbbb;border-radius: 20px;" class="img" src="img/QuickSort2.png" alt="your image description">
+        <br>
+        <h2 style="text-align:center;padding-top:30px;">
+          Optimized Quick sort Algorithm
+        </h2>
+        <br>
+        
+        <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;padding-top: 10px;"><Span>➤</Span>There are several optimizations that can be applied to Quick Sort to improve its performance:</h3><br>
+        <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;"><Span></Span>1.Randomized Pivot Selection: Instead of always choosing the first or last element as the pivot,
+             selecting a random element as the pivot helps to avoid worst-case scenarios and improves the average-case performance.</h3><br>
+        <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;"><Span></Span>2.Median-of-Three Pivot Selection: To further improve the pivot selection, 
+            the median of three elements (e.g., first, middle, and last) can be chosen as the pivot. This reduces the chance of selecting a poorly balanced pivot and improves the performance in many cases.</h3><br>
+        <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;"><Span></Span>3.Insertion Sort for Small Sub-arrays: When the size of a sub-array reduces to a certain threshold 
+            (e.g., 10 or fewer elements), switching to an efficient sorting algorithm like Insertion Sort can provide better performance due to its lower overhead.</h3><br>
+        <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;"><Span></Span>4.Tail Call Optimization: Implementing Quick Sort using tail recursion 
+            or converting it into an iterative loop can optimize the stack space used during recursion, preventing stack overflow errors for large input sizes.</h3><br>
+        <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;"><Span></Span>5.Optimized Partitioning: Using techniques like Hoare's partitioning 
+            scheme or Bentley-McIlroy partitioning algorithm can enhance the efficiency of the partitioning step by reducing the number of element swaps required.</h3><br>
+        
+         <br>
+          <table>
+            <tr>
+              <th>Algorithm</th>
+              <th>Time complexity</th>
+              
+            </tr>
+            <tr>
+              <td>Best Case</td>
+              <td>O(nlogn)</td>
+            </tr>
+            <tr>
+              <td>Average Case</td>
+              <td>O(nlogn)</td>
+            </tr>
+            <tr>
+              <td>Worst Case</td>
+              <td>O(n^2)</td>
+            </tr>
+           
+          </table>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Devloped by</h4>
+              <ul>
+               <li><a href="#">Sunit Kapure</a></li>
+               <li><a href="#">Sanika Ingle</a></li>
+             </ul>
+            </div>
+            <div class="footer-col">
+             <h4>About us</h4>
+             <ul>
+               <li><a href="#">frontend developers</a></li>
+               <li><a href="#">Backend developers</a></li>
+             </ul>
+           </div>
+            <div class="footer-col">
+              <h4>Contact Us</h4>
+              <ul>
+                <li><a href="#">Email:XYZ00@gmail.com</a></li>
+                <li><a href="#">phone no:87999****23</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+               </div>
+            </div>
+          </div>
+        </div>
+     </footer>
+</body>
+</html>

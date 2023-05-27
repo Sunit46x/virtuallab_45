@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Lab of Data Structures</title>
+    <link rel="stylesheet" href="">
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:#dbd6b9;
+      }
+      header {
+        background-color:#03072e;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 25px;
+      }
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration:dotted;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #bfe933;
+        
+      }
+      main {
+       width: 1000px;
+       height: 3000px;
+        margin: 0 auto;
+        padding: 65px;
+        background-color: #d7e4e6;
+        margin: 50px 250px;
+        align-items: center;
+        border-radius: 30px;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #03072e;
+  
+    padding: 40px;
+    width: 1520px;
+    justify-content:space-between;
+
+   
+    
+}
+.footer-col{
+  width: 33%;
+    
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  text-align: center;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+#sunit
+{
+    text-align: center;
+    font-family: sans-serif; 
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: -30px;
+}
+.img {
+  width: 80%; /* make the image fill the container */
+  height: auto; /* maintain aspect ratio */
+  display: block; /* remove default image spacing */
+  width: 70%; /* set the width of the container */
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+table {
+			border-collapse: collapse;
+			width: 100%;
+			max-width: 600px;
+			margin: auto;
+		}
+		td, th {
+			border: 1px solid black;
+			padding: 8px;
+			text-align: left;
+		}
+		th {
+			background-color: #ccc;
+		}
+    iframe {
+  width: 800px;
+  height: 450px;
+  border-radius: 20px;
+  border: 5px #A47E3B solid;
+}
+
+ </style>
+</style>
+<body>
+    <header>
+        <nav>
+          <h1>Virtual Lab of Data Structures</h1>
+          <ul>
+            <li><a href="aa.html">Introduction</a></li>
+            <li><a href="objective.html">objective</a></li>
+            <li><a href="Simulation.html">Simulation</a></li>
+            <li><a href="targeted audience.html">Targeted audience</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold;" id="sunit">Merge Sort</h1>
+        <br>
+        <h3 style="font-family: 'Times New Roman', Times, serif;font-weight: lighter;" ><span>➤</span>Merge sort is a divide-and-conquer sorting algorithm that recursively divides an array
+             into smaller subarrays, sorts them individually, and then merges them back together in a sorted manner. It achieves a time complexity of O(n log n) and is stable, making it suitable
+              for large datasets. 
+           </h3>
+             <br>
+        <h1 style="text-align: center;font-family: 'Times New Roman', Times, serif;font-weight:bold;">How Merge-sort works?</h> 
+        <br> 
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;font-size: 21px;"><span style="padding-left: -10px;">1.Divide:</span> The unsorted array is recursively divided into smaller subarrays until each subarray contains only one element.</h3> 
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;font-size: 21px;"><span style="padding-left: -10px;"></span>2.Merge: The subarrays are then merged back together in a sorted manner. This process begins with merging pairs of subarrays and continues until the entire array is sorted.</h3>
+        <div style="padding-left: 30px;padding-top: 20px;padding-bottom: 30px;" class="sanika">
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;font-size: 21px;"><span style="padding-left: -10px;"></span>2.1. Take two adjacent subarrays and compare the elements at corresponding positions.</h3>  
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;font-size: 21px;"><span style="padding-left: -10px;"></span>2.2. Place the smaller element into a temporary array and move to the next element in that subarray.</h3>
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;font-size: 21px;"><span style="padding-left: -10px;"></span>2.3. Repeat the comparison and placement process until one of the subarrays is fully processed.</h3>
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;font-size: 21px;"><span style="padding-left: -10px;"></span>2.4. Copy the remaining elements from the other subarray directly into the temporary array.</h3>
+        <h3 style="font-family: 'Times New Roman',Times, serif;font-weight: lighter;font-size: 21px;"><span style="padding-left: -10px;"></span>2.5. Replace the original subarray with the sorted elements from the temporary array.</h3>
+        </div>
+
+          <img  style="margin-left: 130px;margin-top: 35px;border: #000000 5px solid;border-radius: 20px;" src="https://media.geeksforgeeks.org/wp-content/uploads/20230331125035/Merge-sort-gif-(1).gif" srcset="https://media.geeksforgeeks.
+          org/wp-content/uploads/20230418180133/insertion-sort-geeksforgeeks.gif 600w," sizes="100vw" width="600" alt="Insertion Sort">
+        <h2 style="text-align: center;    margin-top: 33px;
+        margin-bottom: 34px;" >How the element compare?</h2>
+        <img   style="border-radius: 20px;" class="img" src="img/merge11.png" alt="your image description">
+        <br>
+        <h1 style="text-align: center;color: rgb(0, 0, 0); font-family:sans-serif; margin-top:-25px;font-weight: bolder;">Demonstration of Merge Sort</h1>
+        <br>
+   
+        <!-- <iframe  width="560" height="315" src="https://www.youtube.com/embed/bOk35XmHPKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gEQlwekmotk" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h2 style="text-align: center;padding-top: 27px;">
+          Optimized Bubble sort Algorithm
+        </h2>
+        <br>
+
+        <h3>1.Insertion Sort for Small Subarrays: </h3><h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;"><Span></Span>Instead of recursively dividing the array until each subarray
+           contains only one element, the algorithm switches to Insertion Sort when the subarray size becomes small
+            (e.g., below a certain threshold). This reduces the overhead of recursive calls and performs better on smaller 
+            or partially sorted subarrays.</h3><br>
+            
+           <h3>2.Skipping Unnecessary Merging: </h3><h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;">
+                 During the merging process, the algorithm checks if the last element of the left 
+                subarray is already smaller than or equal to the first element of the right subarray. If true, it means the subarrays are already 
+                sorted, and the merging step can be skipped. This optimization reduces unnecessary comparisons and improves performance.</h3><br>
+
+                <h3>3.Reuse of Auxiliary Array: </h3>     
+        <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;">
+             Instead of creating a new temporary array for each merge operation, the algorithm allocates 
+            a single auxiliary array at the beginning and reuses it throughout the sorting process. This eliminates the overhead of repeated memory 
+            allocation and deallocation, making the algorithm more efficient.</h3><br>
+            <h3>4.Bottom-Up Merge Sort:</h3>
+            <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: lighter;">
+                  The algorithm can be implemented iteratively using a bottom-up approach. It starts with subarrays 
+                of size 1 and merges them to form larger sorted subarrays. This eliminates the need for recursive calls and can be more cache-friendly, 
+                as it works on adjacent elements. This approach further improves performance.</h3>
+         <br>
+
+          <table>
+            <tr>
+              <th>Algorithm</th>
+              <th>Time complexity</th>
+              
+            </tr>
+            <tr>
+              <td>Best Case</td>
+              <td>O(n(logn))</td>
+            </tr>
+            <tr>
+              <td>Average Case</td>
+              <td>O(n(logn))</td>
+            </tr>
+            <tr>
+              <td>Worst Case</td>
+              <td>O(n(logn))</td>
+            </tr>
+           
+          </table>
+      </main>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Footer Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+    
+      <footer class="footer">
+         <div class="container">
+           <div class="row">
+             <div class="footer-col">
+              <h4>Community</h4>
+              <ul>
+               <li><a href="https://www.linkedin.com/in/sunit-kapure-85944423a">Lead Developer</a></li>
+               <li><a href="https://www.linkedin.com/in/sanika-ingle-096587259">Frountend Developer</a></li>
+               <li><a href="#">Video Creation</a></li>
+               <li><a href="https://www.linkedin.com/in/atharva-patil-6a762a231/">Documentation</a></li>
+             </ul>
+             </div>
+             
+             <div class="footer-col">
+               <h4>Contact Us</h4>
+               <ul>
+                 <li><a href="#">Email:virtual_lab45@gmail.com</a></li>
+                 <li><a href="#">phone no: +91 8799992023</a></li>
+                 <li><a href="#">Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033.</a></li>
+                 <!-- Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033. -->
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>follow us</h4>
+               <div class="social-links">
+                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+             </div>
+           </div>
+         </div>
+         <h3 STYLE="color: #919191;text-align: center;padding-top: 58px;font-family: sans-serif;font-weight: lighter;"> Designed and Developed with By Sunit_K And Sanika_I</h3>
+         <h5 style="color: #989898; padding-top: 20px; text-align: center;font-size: 14px;">
+          © Virtual Lab-2023. All rights reserved. The material and content on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of team Matrix.
+
+
+       </h5>
+             </footer>
+       
+    
+    </body>
+    </html>

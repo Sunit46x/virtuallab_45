@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Lab of Data Structures</title>
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:#dbd6b9;
+      }
+      header {
+        background-color:#000000;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 25px;
+      }
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration:dotted;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #37acb9;
+        
+      }
+      main {
+       width: 1000px;
+       height: 4120px;
+        margin: 0 auto;
+        padding: 65px;
+        background-color: #d7e4e6;
+        margin: 50px 250px;
+        align-items: center;
+        border-radius: 30px;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000000;
+    padding: 20px;
+    width: 1520px;
+    
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  text-align: center;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.tushar
+{
+  width: 640px;
+    height: 277px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+}
+.tushar1
+{
+  width: 620px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+}
+.tushar21
+{
+  width: 870px;
+    height: 197px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+}
+.tushar2{
+  width: 870px;
+    height: 186px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+}
+.tushar3
+{
+  width: 870px;
+    height: 275px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+
+}
+.tushar4
+
+  {
+  width: 870px;
+    height: 186px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b1d0d8;
+    border-radius: 21px;
+
+
+}
+
+ </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Virtual Lab of Data Structures</h1>
+        <ul>
+          <li><a  style="text-decoration: none;" href="home.html">Introduction</a></li>
+          <li><a href="objective.html">objective</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="targeted.html">Trgeted Audience</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="text-align: center; font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif;">Link-list</h1><br>
+<h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">These nodes consist of the data to be stored and a pointer to the address of the next node within the linked list. In the case of arrays, the size is limited to the definition, but in linked lists, there is no defined size. Any amount of data can be stored in it and can be deleted from it.</p></h2>
+<h1 style="font-weight:bold;font-family: 'Times New Roman', Times, serif;padding-top: 16px; text-align: center;"><span>Types of Link-list</span></h1>
+          <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">➤Singly Linked List:</H2>
+          <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">Singly linked lists contain two “buckets” in one node; one bucket holds the data and the other bucket holds the address of the next node of the list. Traversals can be done in one direction only as there is only a single link between two nodes of the same list.</p></h2>         
+          <img src="img/ll.png" alt="hai bhg nay ahe!!!" style="    padding-left: 71px;
+          padding-top: 30px;border: #000000 soild 5px;">
+       
+       <!-- double linklait -->
+          <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">➤Doubly Linked Lists:</H2>
+          <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">Doubly Linked Lists contain three “buckets” in one node; one bucket holds the data and the other buckets hold the addresses of the previous and next nodes in the list. The list is traversed twice as the nodes in the list are connected to each other from both sides.</p></h2>         
+          <img src="img/DLL1.png" alt="hai bhg nay ahe!!!" style=" padding-top: 40px;margin-left: -8px;">
+        <!-- circular start hai abb se!! -->
+        <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">➤Circular Linked Lists</H2>
+        <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">Circular linked lists can exist in both singly linked list and doubly linked list.
+
+            Since the last node and the first node of the circular linked list are connected, the traversal in this linked list will go on forever until it is broken.</p></h2>         
+        <img src="img/cll.png" alt="hai bhg nay ahe!!!" style=" padding-top: 40px;margin-left: 108px;">
+        
+        <!-- operation!! -->
+        <H1 style="font-family:'Times New Roman', Times, serif;font-weight: bold;padding-top: 9px;text-align: center;">Basic Operations in the Linked Lists</H1>
+        <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">The basic operations in the linked lists are insertion, deletion, searching, display, and deleting an element at a given key. These operations are performed on Singly Linked Lists as given below −</p></h2>         
+        <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">➤Insertion Operation:</H2>
+        <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">Adding a new node in linked list is a more than one step activity. We shall learn this with diagrams here. First, create a node using the same structure and find the location where it has to be inserted</p></h2> 
+        <img src="img/inserion.gif" alt="chnages" style="margin-top: 22px;margin-left: 166px;"> 
+        <h2><div style="font-weight: lighter;padding-left: 57px;padding-top: 9px;font-family:monospace;" class="tushar">
+     step:1. START<br>
+     step:2. Create a node to store the data<br>
+     step:3. Check if the list is empty<br>
+     step:4. If the list is empty, add the data to the node and assign the head pointer to it.<br>
+     step:5. If the list is not empty, add the data to a node and link to the current head. Assign the head to the newly added node.<br>
+     step:6. END<br></div>
+
+         <!-- <H1 style="font-family:'Times New Roman', Times, serif;font-weight: bold;padding-top: 9px;text-align: center;">Basic Operations in the Linked Lists</H1> -->
+         <!-- <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">The basic operations in the linked lists are insertion, deletion, searching, display, and deleting an element at a given key. These operations are performed on Singly Linked Lists as given below −</p></h2>          -->
+         <!-- <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;"> Operation:</H2>
+         <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">Adding a new node in linked list is a more than one step activity. We shall learn this with diagrams here. First, create a node using the same structure and find the location where it has to be inserted</p></h2> 
+          <img src="img/inserion.gif" alt="chnages" style="margin-top: 22px;margin-left: 166px;">  -->
+
+          <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">➤Deletion Operation:</H2>
+          <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">Deletion in a linked list involves removing a node from the list. The process typically consists of updating the pointers of the surrounding nodes to bypass the node being deleted.</p></h2> 
+           <img src="img/sunit.png" alt="chnages" width="700px" height="350px" style="margin-top: 22px;margin-left: 84px;"> 
+           <h2><div style="font-weight: lighter;padding-left: 57px;padding-top: 9px;font-family:monospace;" class="tushar21">
+            Point head to the next node i.e. second node<br>
+            temp = head<br>
+            head = head->next<br>
+    
+            Make sure to free unused memory<br>
+            free(temp); or delete temp;  <br></div>
+
+            <!-- traversal code start hota -->
+            <H2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">➤Traversal Operation:</H2>
+          <h2 style="font-family:'Times New Roman', Times, serif;font-weight: lighter;padding-left: 19px;padding-top: 9px;">The idea here is to step through the list from beginning to end. For example , we may want to print the list or search for a specific node in the list.</p></h2> 
+           <img src="img/traverse-in-singly-linked-list-using-link.png" alt="chnages" width="700px" height="200px" style="margin-top: 22px;margin-left: 84px;">
+           <h2><div style="font-weight: lighter;padding-left: 57px;padding-top: 9px;font-family:monospace;" class="tushar3">
+            STEP 1: SET PTR = HEAD<br>
+            STEP 2: IF PTR = NULL<br>
+   WRITE "EMPTY LIST"<br>
+  GOTO STEP 7<br>
+  END OF IF<br>
+
+STEP 4: REPEAT STEP 5 AND 6 UNTIL PTR != NULL<br>
+STEP 5: PRINT PTR→ DATA<br>
+STEP 6: PTR = PTR → NEXT<br>
+
+STEP 7: EXIT   <br>
+            <br></div>
+
+    </main>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Footer Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+    
+      <footer class="footer">
+         <div class="container">
+           <div class="row">
+             <div class="footer-col">
+              <h4>Devloped by</h4>
+              <ul>
+               <li><a href="#">Sunit Kapure</a></li>
+               <li><a href="#">Sanika Ingle</a></li>
+             </ul>
+             </div>
+             <div class="footer-col">
+               <h4>About us</h4>
+               <ul>
+                 <li><a href="#">frontend developers</a></li>
+                 <li><a href="#">Backend developers</a></li>
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>Contact Us</h4>
+               <ul>
+                 <li><a href="#">Email:XYZ00@gmail.com</a></li>
+                 <li><a href="#">phone no:87999****23</a></li>
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>follow us</h4>
+               <div class="social-links">
+                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+             </div>
+           </div>
+         </div>
+      </footer>
+    
+    </body>
+    </html>
+    
+    
+  </body>
+</html>

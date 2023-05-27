@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Lab of Data Structures</title>
+    <link rel="stylesheet" href="">
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:#dbd6b9;
+      }
+      header {
+        background-color:#03072e;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 25px;
+      }
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration:dotted;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #bfe933;
+        
+      }
+      main {
+       width: 1000px;
+       height: 3500px;
+        margin: 0 auto;
+        padding: 65px;
+        background-color: #d7e4e6;
+        margin: 50px 250px;
+        align-items: center;
+        border-radius: 30px;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #03072e;
+  
+    padding: 40px;
+    width: 1520px;
+    justify-content:space-between;
+
+   
+    
+}
+.footer-col{
+  width: 33%;
+    
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  text-align: center;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:hwb(0 4% 96%);
+}
+.flex-container .box {
+  background-color: hwb(26 49% 5%);
+  width: 50%;
+  margin: 5px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 27px;
+}
+.bolded { font-weight: bold; }
+   </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <h1>Virtual Lab of Data Structures</h1>
+      </nav>
+    </header>
+
+    <main>
+        <marquee direction="left" 
+        scrollamount="16"
+            style="border:BLACK 2px SOLID">
+            <h1><b>TIME COMPLEXITY OF QUICK SORT  </b></h1>
+
+        </marquee>
+        
+        <br><br>
+        <h1 style="text-align: center;font-weight: bolder;font-family: 'Times New Roman', Times, serif;">BEST CASE TIME COMPLEXITY</h1><br>
+        <p style="font-size:20px;" >The best case time complexity for Qucik sort would be that the pivot element is present at the middle position of the array.<br><br>Consider the given array :  </p>
+       
+        <div class="flex-container">
+            <div class="box">5</div>
+            <div class="box">7</div>
+            <div class="box">9</div>                  
+            <div class="box">15</div>
+            <div class="box">17</div>
+            <div class="box">29</div>
+            <div class="box">35</div>
+          </div>
+          <br>
+          <p style="font-size:20px;" >Here let us consider 15 as the pivot element as it is present at the (n+1)<sup>th</sup>index of the array.
+          <br><br>
+          In the best-case scenario for QuickSort, the recurrence relation can be defined as follows:
+<br>
+T(n) = 2T(n/2) + O(n)
+<br><br>
+Here, T(n) represents the time complexity of sorting an array of size 'n' in the best-case scenario. The recurrence relation states that the time complexity of QuickSort in the best-case scenario is equal to twice the time complexity of sorting each half of the array (n/2) plus the time complexity of the partitioning step (O(n)).<br>
+<br>
+The factor of 2 in the recurrence relation arises because, in the best case, the chosen pivot consistently divides the array into two roughly equal-sized subarrays.<br><br>
+          T(n) = 2*T(n/2) + n                ..............(1)<br>
+          Here the dividing factor is n/2 so substitute the value of n as n/2.<br>
+          T(n/2) = 2*T(n/4) + n/2             ..............(2)<br>
+          T(n/4) = 2*T(n/8) + n/4              ..............(3)<br>
+          <br>
+          Now we have to perform backsubstitution to get the value of T(n).<br>
+          T(n) = 2*T(n/2) + n                  .............from eq(1)<br>
+          T(n) = 2*[2*T(n/4)+ n/2] + n<br>
+          T(n) = 4*T(n/4) + 2n                  ..............(4)  <br>
+          T(n) = 4*[2*T(n/8)+n/4] + n<br>
+          T(n) = 8*T(n/8) + 3n                   ..............(5)<br>
+          <br>
+          from above eq(4),(5) we can conclude that :<br>
+          T(n) = 2^k * T(n/2^k) + kn             .............(A)<br>
+          <br>
+          Here we consider n/2^k as 1 so that we can efficiently find the time complexities.<br>
+          n/2^k = 1<br>
+          n = 2^k<br>
+          taking log on both sides.<br>
+          log n = log(2^k)<br>
+          i.e. logn =klog2<br>
+          logn = k<br>
+           eq.(A) becomes :<br>
+           T(n) = n*T(1) + nlogn<br>
+           i.e. T(n) = n + nlogn <br>
+           T(n) = nlogn     ............considering only dominant terms<br>
+           <br>
+        </p>
+          <h1 style="text-align: center;font-weight:bold;">WORST CASE TIME COMPLEXITY</h1><br>
+        <p style="font-size:20px;" >The worst case time complexity for quick sort would be that the pivot elemt is present at zero<sup>th</sup> index or (n-1)<sup>th</sup> index.<br><br>Consider the given array :  </p>
+<br>
+        <div class="flex-container">
+            <div class="box">35</div>
+            <div class="box">29</div>
+            <div class="box">17</div>                  
+            <div class="box">15</div>
+            <div class="box">9</div>
+            <div class="box">7</div>
+            <div class="box">5</div>
+          </div><br>
+          <p style="font-size:20px;" >The recurrence relation for the worst-case time complexity of QuickSort can be defined as follows:<br>
+            <br>
+            T(n) = T(n-1) + O(n)<br>
+            <br>
+            Here, T(n) represents the time complexity of sorting an array of size 'n' in the worst-case scenario. The recurrence relation states that the time complexity of QuickSort in the worst case is equal to the time complexity of sorting an array of size (n-1) plus the time complexity of the partitioning step (O(n)).<br>Here , the recurrence relation would be : <br>
+            T(n) = T(n-1) + n           ............(1)
+            <br><br>
+            So the dividing factor would be <span class="bolded">(n-1).</span><br>
+            Substitute the value of n as (n-1) in eq.(1)<br>
+            T(n-1) = T(n-2) + (n-1)       ..........(2)<br>
+            
+            Again rebsubstite the values : <br>
+            T(n-2) = T(n-3) + (n-2)       ..........(3)<br>
+            T(n-3) = T(n-4) + (n-3)       ..........(4)
+            <br><br>
+            Now Backsubstituting the values : <br>
+            Consider eq(1) : <br>
+            T(n) = T(n-1) + n<br>
+            T(n) = T(n-2) + (n-1) + n ...................from eq.(2)<br>
+            T(n) = T(n-3) + (n-2) + (n-1) + n ...........from eq.(3)<br>
+            T(n) = T(n-4) + (n-3) + (n-2) + (n-1) + n....from eq.(4)<br><br>
+            So the above equation can be written as : 
+            T(n) = T(n-k) + <sup>n(n+1)</sup> &#8260; <sub>2</sub><br>
+            We need to eliminate T(n-k). So we put n-k=1 so n=k+1
+           <br>
+            hence the above equation becomes : <br> T(n)=T(1) + <sup>(k+1)(k+2)</sup> &#8260; <sub>2</sub><br>
+            So it becomes T(n) = k<sup>2</sup>+3k+2 ; <br>
+            We only consider dominant terms so T(n)=k<sup>2</sup> i.e<br></p>
+            <p style="font-size:22px;" ><span class="bolded">T(n)=n<sup>2</span></sup></p><br> 
+            <h1 style="text-align: center;font-weight:bold;">AVERAGE CASE TIME COMPLEXITY</h1><br>
+              <p style="font-size:20px;" >The average case time complexity for quick sort will be  the pivot selection process is assumed to divide the array into two roughly equal-sized subarrays with high probability.<br><br>Consider the given array :  </p>
+      <br>
+              <div class="flex-container">
+                  <div class="box">25</div>
+                  <div class="box">29</div>
+                  <div class="box">27</div>                  
+                  <div class="box">15</div>
+                  <div class="box">19</div>
+                  <div class="box">47</div>
+                  <div class="box">5</div>
+
+                </div><br></p>   
+                <p style="font-size:20px;" >Here the recurrence relation would be same as best case and would be derived in the same process.<br>
+                The Average case time complexity for Quick Sort would be :<p style="font-size:22px;" ><span class="bolded">T(n)=n<sup>2</span></p> 
+    </main>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Footer Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+    
+      <footer class="footer">
+         <div class="container">
+           <div class="row">
+             <div class="footer-col">
+              <h4>Community</h4>
+              <ul>
+               <li><a href="https://www.linkedin.com/in/sunit-kapure-85944423a">Lead Developer</a></li>
+               <li><a href="https://www.linkedin.com/in/sanika-ingle-096587259">Frountend Developer</a></li>
+               <li><a href="#">Video Creation</a></li>
+               <li><a href="https://www.linkedin.com/in/atharva-patil-6a762a231/">Documentation</a></li>
+             </ul>
+             </div>
+             
+             <div class="footer-col">
+               <h4>Contact Us</h4>
+               <ul>
+                 <li><a href="#">Email:virtual_lab45@gmail.com</a></li>
+                 <li><a href="#">phone no: +91 8799992023</a></li>
+                 <li><a href="#">Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033.</a></li>
+                 <!-- Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033. -->
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>follow us</h4>
+               <div class="social-links">
+                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+             </div>
+           </div>
+         </div>
+         <h3 STYLE="color: #919191;text-align: center;padding-top: 58px;font-family: sans-serif;font-weight: lighter;"> Designed and Developed with By Sunit_K And Sanika_I</h3>
+         <h5 style="color: #989898; padding-top: 20px; text-align: center;font-size: 14px;">
+          © Virtual Lab-2023. All rights reserved. The material and content on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of team Matrix.
+
+
+       </h5>
+             </footer>
+       
+    
+    </body>
+    </html>

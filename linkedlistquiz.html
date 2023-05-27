@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Lab of Data Structures</title>
+    <link rel="stylesheet" href="">
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:#dbd6b9;
+      }
+      header {
+        background-color:#03072e;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 25px;
+      }
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration:dotted;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #bfe933;
+        
+      }
+      main {
+       width: 1000px;
+       height: 500px;
+        margin: 0 auto;
+        padding: 65px;
+        background-color: #d7e4e6;
+        margin: 50px 250px;
+        align-items: center;
+        border-radius: 30px;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #03072e;
+  
+    padding: 40px;
+    width: 1520px;
+    justify-content:space-between;
+
+   
+    
+}
+.footer-col{
+  width: 33%;
+    
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  text-align: center;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:hwb(0 4% 96%);
+}
+.flex-container .box {
+  background-color: hwb(26 49% 5%);
+  width: 50%;
+  margin: 5px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 27px;
+}
+.sunit
+{
+  font-family:'Times New Roman', Times, serif;
+text-align: center;
+  font-weight: bold;
+  ;
+}
+.option
+{
+ padding-left: 60px;
+}
+#submit-btn
+{
+ padding: 12px 23px 10px 20px;
+ border: #000000 3px solid;
+ border-radius: 9px;
+ color: #ffffff;
+ background-color: #29b837;
+ font-size:large;
+ margin-top: 30px;
+}
+ </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Virtual Lab of Data Structures</h1>
+        <ul>
+          <li><a  style="text-decoration: none;" href="home.html">Introduction</a></li>
+          <li><a href="objective.html">objective</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="feedback.html">Trgeted Audience</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="sunit">	
+        Multiple Choice Question</h1>
+
+      <div id="quiz-container">
+        <div  style="padding-top: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 22px;" id="question-container" class="question">
+          
+        </div>
+        <div id="options-container" class="options">
+            
+        </div>
+        <button id="submit-btn">Submit</button>
+        
+      </button>
+        <div id="result"></div>
+      </div>    
+    </main>
+<script> // Quiz questions and answers
+  const quizData = [
+  {
+        question:"Q1.What is a linked list?  ",
+        options: [" A linear data structure that consists of nodes, each containing data and a reference to the next node. ","A data structure that stores elements in a random order..","A data structure that allows elements to be accessed from both ends."," A data structure that stores elements in a sorted manner."],
+        answer: " A linear data structure that consists of nodes, each containing data and a reference to the next node. "      },
+      {
+        question: "Q2.Which of the following operations is NOT typically associated with a linked list? ",
+        options: ["Insertion at the beginning","Deletion from the middle","Searching for an element ","Peek "],
+        answer: "Peek"
+      },
+      {
+        question: "Q3. What is the time complexity of inserting a node at the beginning of a linked list?",
+        options: ["O(1)","O(log n)"," O(n)","O(n^2) "],
+        answer: " O(1)"
+      },
+      {
+        question: "Q 4.Which data structure can be used to implement a linked list?",
+options: [" Array", "Linked list", "Tree", "Stack"],
+        answer: "Array"
+      },
+      {
+        question: "Q 5. In a singly linked list, what is the last node called? ",
+ 
+        options: ["Front node","Rear node","Head node","Tail node"],
+        answer: "Tail node"
+      },
+      {
+        question: "Q 6.Suppose you have a linked list that contains the numbers 2, 4, 6, and 8 in that order. What is the value of the second node?",
+        options: ["2","6","4","8"],
+        answer: " 4"
+      },
+      {
+        question: "Q 7. If you have a linked list with the numbers 5, 10, and 15, and you perform a deletion operation to remove the second node, what will be the new size of the linked list?",
+        options: ["0","1","2","3"],
+        answer: "2"
+      },
+      {
+        question: "Q 8. Consider a linked list that initially contains the numbers 3, 6, 9, and 12. If you perform an insertion operation to add the number 15 after the second node, what will be the value of the third node?",
+        options: ["3", "6", "12", "15"],
+        answer: "15"
+      },
+      {
+        question: "Q 9. You have a linked list with the numbers 2, 4, 6, and 8. If you perform a deletion operation to remove the last node, what will be the new size of the linked list?",
+        options: ["2", "1", "0", "3"],
+        answer: "2"
+      },
+      {
+        question: "Q 10. If you have an empty linked list and you perform an insertion operation to add the numbers 5, 10, and 15 in that order, what will be the size of the linked list?",
+        options: ["2", "1", "0", "3"],
+        answer: "3"
+      }
+      
+       
+      
+   ];
+
+    let currentQuestion = 0;
+    let userAnswers = [];
+
+    const questionContainer = document.getElementById("question-container");
+    const optionsContainer = document.getElementById("options-container");
+    const submitButton = document.getElementById("submit-btn");
+    const resultContainer = document.getElementById("result");
+
+    function displayQuestion() {
+  const question = quizData[currentQuestion];
+  questionContainer.innerText = question.question;
+  optionsContainer.innerHTML = "";
+
+  for (let i = 0; i < question.options.length; i++) {
+    const option = question.options[i];
+
+    const optionContainer = document.createElement("div");
+    optionContainer.classList.add("option-container");
+
+    const radioBtn = document.createElement("input");
+    radioBtn.type = "radio";
+    radioBtn.name = "answer";
+    radioBtn.value = option;
+
+    const label = document.createElement("label");
+    label.innerText = option;
+
+    optionContainer.appendChild(radioBtn);
+    optionContainer.appendChild(label);
+
+    optionsContainer.appendChild(optionContainer);
+  }
+}
+
+
+    function submitAnswer() {
+      const selectedOption = document.querySelector('input[name="answer"]:checked');
+      if (selectedOption) {
+        userAnswers.push(selectedOption.value);
+        currentQuestion++;
+
+        if (currentQuestion < quizData.length) {
+          displayQuestion();
+        } else {
+          displayResult();
+        }
+      }
+    }
+
+    function displayResult() {
+      let score = 0;
+
+      for (let i = 0; i < quizData.length; i++) {
+        if (userAnswers[i] === quizData[i].answer) {
+          score++;
+        }
+      }
+
+      resultContainer.innerText = `Your score: ${score}/${quizData.length}`;
+    }
+
+    // Event listeners
+    submitButton.addEventListener("click", submitAnswer);
+
+    // Display the first question
+    displayQuestion();
+ </script>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Footer Design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+    
+      <footer class="footer">
+         <div class="container">
+           <div class="row">
+             <div class="footer-col">
+              <h4>Community</h4>
+              <ul>
+               <li><a href="https://www.linkedin.com/in/sunit-kapure-85944423a">Lead Developer</a></li>
+               <li><a href="https://www.linkedin.com/in/sanika-ingle-096587259">Frountend Developer</a></li>
+               <li><a href="#">Video Creation</a></li>
+               <li><a href="https://www.linkedin.com/in/atharva-patil-6a762a231/">Documentation</a></li>
+             </ul>
+             </div>
+             
+             <div class="footer-col">
+               <h4>Contact Us</h4>
+               <ul>
+                 <li><a href="#">Email:virtual_lab45@gmail.com</a></li>
+                 <li><a href="#">phone no: +91 8799992023</a></li>
+                 <li><a href="#">Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033.</a></li>
+                 <!-- Address: JSPM Rajarshi shahu college of engineering , Tathawade, Service Rd, Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033. -->
+               </ul>
+             </div>
+             <div class="footer-col">
+               <h4>follow us</h4>
+               <div class="social-links">
+                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.fa-twitter.com/"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.fa-instagram.com/"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.fa-linkedin-in.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+             </div>
+           </div>
+         </div>
+         <h3 STYLE="color: #919191;text-align: center;padding-top: 58px;font-family: sans-serif;font-weight: lighter;"> Designed and Developed with By Sunit_K And Sanika_I</h3>
+         <h5 style="color: #989898; padding-top: 20px; text-align: center;font-size: 14px;">
+          © Virtual Lab-2023. All rights reserved. The material and content on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of team Matrix.
+
+
+       </h5>
+             </footer>
+       
+    
+    </body>
+    </html>
